@@ -17,13 +17,13 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView textResult;
+    private TextView text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(layout.activity_main);
-        textResult=findViewById(R.id.textResult);
+        text=findViewById(R.id.textResult);
 
 
 }
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 if(resultCode==RESULT_OK && data!=null)
                 {
                     ArrayList<String > result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-                    textResult.setText(result.get(0));
+                    text.setText(result.get(0));
                 }
                 break;
         }
